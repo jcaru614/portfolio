@@ -6,7 +6,7 @@ html {
 	scroll-behavior: smooth;
 }
 
-/* Add this to your global CSS or a specific CSS module */
+/* Home Page and Shapes Animations */
 #home {
 	position: relative;
 	overflow: hidden;
@@ -63,8 +63,28 @@ html {
 		transform: translateY(0) translateX(0) rotate(360deg);
 	}
 }
-
+/* Custom Cursor */
 .shape-square:nth-child(odd),
 .shape-circle:nth-child(odd) {
 	animation: float-rotate 10s ease-in-out infinite;
+}
+
+.custom-cursor {
+	position: fixed;
+	width: 300px; /* Increased size */
+	height: 300px; /* Increased size */
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.05); /* Very dim light */
+	box-shadow: 0 0 100px 100px rgba(255, 255, 255, 0.05); /* Increased diffusion */
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+	z-index: 9999;
+	transition: width 0.3s, height 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+
+
+.custom-cursor:hover {
+	background-color: rgba(255, 255, 255, 1);
+	box-shadow: 0 0 12px rgba(255, 255, 255, 1);
 }

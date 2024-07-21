@@ -45,7 +45,7 @@ export default function Contact() {
 	return (
 		<section
 			id='contact'
-			className='min-h-screen flex items-center justify-center bg-background text-center p-4'
+			className='min-h-screen flex items-center justify-center text-center p-4'
 		>
 			<div className='max-w-lg w-full'>
 				<h2 className='text-3xl font-bold text-textPrimary mb-8'>Send me a message!</h2>

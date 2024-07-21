@@ -13,7 +13,7 @@ const ExperienceCard = ({
 }) => {
 	return (
 		<a href={link} target='_blank' rel='noopener noreferrer' className={`block ${className}`}>
-			<div className='bg-background p-6 shadow-lg hover:bg-primary hover:shadow-xl hover:rounded-lg transition-all duration-300 max-w-3xl mb-6'>
+			<div className='p-6 shadow-lg hover:bg-primary hover:shadow-xl hover:rounded-lg transition-all duration-300 max-w-3xl mb-6'>
 				<div className='flex justify-between items-center mb-4'>
 					<span className='text-gray-400'>
 						{startDate} — {endDate}

@@ -3,23 +3,23 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Navbar() {
 	return (
-		<div className='fixed top-0 left-0 w-full lg:w-64 bg-primary text-white z-50'>
+		<div className='bg-primary text-white z-50'>
 			{/* Header for small screens */}
-			<div className='lg:hidden flex flex-col items-center p-6 bg-primary text-white fixed top-0 left-0 w-full h-[200px] z-50 shadow-lg'>
-				<div className='text-3xl font-bold mb-2'>Joseph Caruana</div>
-				<p className='text-xl mb-4'>Front End and Mobile Developer</p>
-				<nav className='flex space-x-6 mb-4'>
+			<div className='lg:hidden flex flex-col items-center p-4 bg-primary text-white w-full h-[150px] shadow-lg'>
+				<div className='text-2xl font-bold mb-2'>Joseph Caruana</div>
+				<p className='text-lg mb-2'>Front End and Mobile Developer</p>
+				<nav className='flex space-x-4 mb-2'>
 					<Link href='https://github.com/jcaru614' target='_blank' rel='noopener noreferrer'>
-						<FaGithub className='text-2xl hover:text-secondary transition-colors duration-300' />
+						<FaGithub className='text-xl hover:text-secondary transition-colors duration-300' />
 					</Link>
 					<Link href='https://www.linkedin.com/in/joey-caruana/' target='_blank' rel='noopener noreferrer'>
-						<FaLinkedin className='text-2xl hover:text-secondary transition-colors duration-300' />
+						<FaLinkedin className='text-xl hover:text-secondary transition-colors duration-300' />
 					</Link>
 				</nav>
 			</div>
 
 			{/* Navbar for large screens */}
-			<div className='hidden lg:flex flex-col items-start py-10 min-h-screen bg-primary text-white shadow-lg px-6'>
+			<div className='hidden lg:flex flex-col items-start py-10 min-h-screen bg-primary text-white shadow-lg px-6 lg:w-64'>
 				<p className='text-4xl font-bold mb-4'>Joseph Caruana</p>
 				<p className='text-xl mb-4 text-textSecondary'>Full Stack and Mobile Developer</p>
 				<p className='text-m mb-8 max-w-xs'>

@@ -36,7 +36,7 @@ const Experience = () => {
 	return (
 		<section
 			id='about'
-			className='min-h-screen flex flex-col items-center justify-center bg-background text-center p-4'
+			className='min-h-screen flex flex-col items-center justify-center text-center p-4'
 		>
 			{experiences.map((exp, index) => (
 				<ExperienceCard

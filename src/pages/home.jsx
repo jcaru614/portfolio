@@ -17,7 +17,7 @@ export default function Home() {
 	return (
 		<section
 			id='home'
-			className='relative min-h-screen flex flex-col items-center justify-center bg-background text-center p-4'
+			className='relative min-h-screen flex flex-col items-center justify-center text-center p-4'
 		>
 			<div className='relative z-10 text-white'>
 				<h1 className='text-6xl font-bold mb-4'>Joseph Caruana</h1>
