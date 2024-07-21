@@ -3,9 +3,9 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Navbar() {
 	return (
-		<div className='bg-primary text-white z-50'>
+		<div className='bg-primary text-textPrimary z-50'>
 			{/* Header for small screens */}
-			<div className='lg:hidden flex flex-col items-center p-4 bg-primary text-white w-full h-[150px] shadow-lg'>
+			<div className='lg:hidden flex flex-col items-center p-4 w-full h-[150px] shadow-lg'>
 				<div className='text-2xl font-bold mb-2'>Joseph Caruana</div>
 				<p className='text-lg mb-2'>Front End and Mobile Developer</p>
 				<nav className='flex space-x-4 mb-2'>
@@ -19,10 +19,10 @@ export default function Navbar() {
 			</div>
 
 			{/* Navbar for large screens */}
-			<div className='hidden lg:flex flex-col items-start py-10 min-h-screen bg-primary text-white shadow-lg px-6 lg:w-64'>
-				<p className='text-4xl font-bold mb-4'>Joseph Caruana</p>
-				<p className='text-xl mb-4 text-textSecondary'>Full Stack and Mobile Developer</p>
-				<p className='text-m mb-8 max-w-xs'>
+			<div className='hidden lg:flex flex-col items-start py-10 min-h-screen shadow-lg px-6 lg:w-64 sticky top-0'>
+				<h2 className='text-4xl font-bold mb-4'>Joseph Caruana</h2>
+				<p className='text-lg mb-4 text-textSecondary'>Full Stack and Mobile Developer</p>
+				<p className='text-sm mb-8 max-w-xs'>
 					Creating immersive, engaging, and top-tier digital solutions for web and mobile.
 				</p>
 				<nav className='flex flex-col space-y-6 mb-6'>
@@ -34,7 +34,7 @@ export default function Navbar() {
 							/>
 							<Link
 								href={`#${item.toLowerCase()}`}
-								className='relative text-lg font-bold text-white transition-transform duration-300 group-hover:translate-x-3 group-hover:text-secondary ml-10'
+								className='relative text-lg font-bold text-textPrimary transition-transform duration-300 group-hover:translate-x-3 group-hover:text-secondary ml-10'
 							>
 								{item}
 							</Link>

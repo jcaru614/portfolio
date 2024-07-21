@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { PageTitle } from '@/components';
 
 export default function Contact() {
 	const [formData, setFormData] = useState({
@@ -45,10 +46,10 @@ export default function Contact() {
 	return (
 		<section
 			id='contact'
-			className='min-h-screen flex items-center justify-center text-center p-4'
+			className='min-h-screen flex flex-col items-center justify-center text-center p-4'
 		>
+			<PageTitle title='Send Me A Message' />
 			<div className='max-w-lg w-full'>
-				<h2 className='text-3xl font-bold text-textPrimary mb-8'>Send me a message!</h2>
 				<p className='text-lg text-textSecondary mb-8'>
 					Got a question or proposal, or just want to say hello? Go ahead.
 				</p>
@@ -62,7 +63,7 @@ export default function Contact() {
 								value={formData.name}
 								onChange={handleChange}
 								placeholder='Enter your name'
-								className='p-2 border border-borderColor rounded text-black placeholder-gray-500'
+								className='p-2 border border-borderColor rounded text-primary placeholder-gray-500'
 								required
 							/>
 						</label>
@@ -74,7 +75,7 @@ export default function Contact() {
 								value={formData.email}
 								onChange={handleChange}
 								placeholder='Enter your email address'
-								className='p-2 border border-borderColor rounded text-black placeholder-gray-500'
+								className='p-2 border border-borderColor rounded text-primary placeholder-gray-500'
 								required
 							/>
 						</label>
@@ -87,13 +88,13 @@ export default function Contact() {
 							onChange={handleChange}
 							placeholder='Type your message here'
 							rows='6'
-							className='p-2 border border-borderColor rounded text-black placeholder-gray-500'
+							className='p-2 border border-borderColor rounded text-primary placeholder-gray-500'
 							required
 						/>
 					</label>
 					<button
 						type='submit'
-						className='py-2 px-4 bg-primary text-white font-bold rounded hover:bg-secondary transition-colors duration-300'
+						className='py-2 px-4 bg-primary text-textPrimary font-bold rounded hover:bg-secondary transition-colors duration-300'
 					>
 						Send Message
 					</button>

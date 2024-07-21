@@ -25,7 +25,7 @@ const ExperienceCard = ({
 						<FaExternalLinkAlt className='ml-2 text-secondary' />
 					</div>
 				</div>
-				<p className='text-textSecondary mb-4'>{description}</p>
+				<p className='text-textSecondary mb-4 text-left'>{description}</p>
 				<div className='flex flex-wrap gap-2'>
 					{skills.map((skill, index) => (
 						<span key={index} className='bg-secondary text-black px-3 py-1 rounded-full'>

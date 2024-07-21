@@ -1,5 +1,6 @@
 import { FaDesktop, FaReact } from 'react-icons/fa';
 import { CiMobile3 } from 'react-icons/ci';
+import { PageTitle } from '@/components';
 
 export default function About() {
 	return (
@@ -7,7 +8,7 @@ export default function About() {
 			id='about'
 			className='min-h-screen flex flex-col items-center justify-center text-center p-4'
 		>
-			<h2 className='text-5xl font-bold text-textPrimary mb-6'>About Me</h2>
+			<PageTitle title='about' />
 			<p className='text-lg text-textSecondary max-w-2xl mb-12'>
 				As a seasoned Front End and Mobile Developer, I have extensive experience in building and enhancing
 				web and mobile applications using technologies such as React, React Native, and TypeScript. My work

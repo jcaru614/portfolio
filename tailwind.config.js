@@ -7,6 +7,10 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				bebas: ['Bebas Neue', 'sans-serif'],
+				mono: ['Courier New', 'Consolas', 'Menlo', 'monospace'],
+			},
 			colors: {
 				primary: '#15212C',
 				secondary: '#CBF381',

@@ -5,11 +5,11 @@ import Experience from '@/pages/experience';
 
 export default function MainPage() {
 	return (
-		<div>
+		<>
 			<Home />
 			<About />
 			<Experience />
 			<Contact />
-		</div>
+		</>
 	);
 }

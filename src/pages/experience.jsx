@@ -1,6 +1,7 @@
 import React from 'react';
-import ExperienceCard from '@/components/ExperienceCard';
+import { ExperienceCard, PageTitle } from '@/components';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Experience = () => {
 	const experiences = [
@@ -38,6 +39,7 @@ const Experience = () => {
 			id='about'
 			className='min-h-screen flex flex-col items-center justify-center text-center p-4'
 		>
+			<PageTitle title='Professional Experience' />
 			{experiences.map((exp, index) => (
 				<ExperienceCard
 					key={index}
@@ -48,17 +50,19 @@ const Experience = () => {
 					description={exp.description}
 					skills={exp.skills}
 					link={exp.link}
-					className={index % 2 === 0 ? 'ml-auto' : 'mr-auto'}
+					className={index % 2 === 0 ? 'ml-auto text-left' : 'mr-auto text-left'}
 				/>
 			))}
-			<a
+			<Link
 				href='/resume.pdf'
 				target='_blank'
 				rel='noopener noreferrer'
-				className='mt-12 text-lg text-textPrimary hover:text-secondary transition-colors duration-300'
+				className={`mt-12 text-2xl text-textPrimary hover:text-secondary transition-colors duration-300 ${
+					experiences.length % 2 === 0 ? 'ml-auto' : 'mr-auto'
+				}`}
 			>
 				View Full Résumé <FaExternalLinkAlt className='inline ml-2' />
-			</a>
+			</Link>
 		</section>
 	);
 };
