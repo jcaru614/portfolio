@@ -9,8 +9,33 @@ html {
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
+:root {
+	--color-primary: #15212c;
+	--color-secondary: #cbf381;
+	--color-background: #1a191d;
+	--color-textPrimary: #ffffff;
+	--color-textSecondary: #66d9ed;
+	--color-borderColor: #e0e0e0;
+	--color-cursor: rgba(255, 255, 255, 0.05);
+	--color-cursor-hover: rgba(255, 255, 255, 1);
+}
+
+/* Light theme variables */
+body.light {
+	--color-primary: #ffffff;
+	--color-secondary: #90cdf4;
+	--color-background: #e2f0cb;
+	--color-textPrimary: #2d3748;
+	--color-textSecondary: #4a5568;
+	--color-borderColor: #a0aec0;
+	--color-cursor: rgba(0, 0, 0, 0.1);
+	--color-cursor-hover: rgba(0, 0, 0, 0.5);
+}
+
 body {
 	font-family: 'Bebas Neue', sans-serif;
+	background-color: var(--color-background);
+	color: var(--color-textPrimary);
 }
 
 p {
@@ -39,7 +64,7 @@ p {
 .shape-square {
 	width: 50px;
 	height: 50px;
-	background-color: #cbf381; /* Secondary color */
+	background-color: var(--color-secondary);
 	animation-duration: 6s;
 }
 
@@ -47,7 +72,7 @@ p {
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
-	background-color: #cbf381; /* Secondary color */
+	background-color: var(--color-secondary);
 	animation-duration: 10s;
 }
 
@@ -82,11 +107,11 @@ p {
 
 .custom-cursor {
 	position: fixed;
-	width: 300px; /* Increased size */
-	height: 300px; /* Increased size */
+	width: 300px;
+	height: 300px;
 	border-radius: 50%;
-	background-color: rgba(255, 255, 255, 0.05); /* Very dim light */
-	box-shadow: 0 0 100px 100px rgba(255, 255, 255, 0.05); /* Increased diffusion */
+	background-color: var(--color-cursor);
+	box-shadow: 0 0 100px 100px var(--color-cursor);
 	pointer-events: none;
 	transform: translate(-50%, -50%);
 	z-index: 9999;
@@ -94,6 +119,6 @@ p {
 }
 
 .custom-cursor:hover {
-	background-color: rgba(255, 255, 255, 1);
-	box-shadow: 0 0 12px rgba(255, 255, 255, 1);
+	background-color: var(--color-cursor-hover);
+	box-shadow: 0 0 12px var(--color-cursor-hover);
 }

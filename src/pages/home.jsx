@@ -20,7 +20,7 @@ export default function Home() {
 			className='relative min-h-screen flex flex-col items-center justify-center text-center p-4'
 		>
 			<div className='relative z-10'>
-				<h1 className='text-8xl font-bold mb-4 text-textPrimary'>Joseph Caruana</h1>
+				<h1 className='text-8xl font-bold mb-4 text-textPrimary'>Joey Caruana</h1>
 				<p className='text-2xl font-medium text-textSecondary'>Software Engineer, Front End & App Developer.</p>
 			</div>
 			<div className='shapes-container absolute inset-0 z-0 overflow-hidden'>

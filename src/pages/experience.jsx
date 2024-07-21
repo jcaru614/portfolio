@@ -36,10 +36,10 @@ const Experience = () => {
 
 	return (
 		<section
-			id='about'
+			id='experience'
 			className='min-h-screen flex flex-col items-center justify-center text-center p-4'
 		>
-			<PageTitle title='Professional Experience' />
+			<PageTitle title='Experience' />
 			{experiences.map((exp, index) => (
 				<ExperienceCard
 					key={index}

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+	darkMode: 'class', // Enable class-based dark mode
 	content: [
 		'./src/pages/**/*.{js,ts,jsx,tsx,mdx}',
 		'./src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -12,12 +13,12 @@ module.exports = {
 				mono: ['Courier New', 'Consolas', 'Menlo', 'monospace'],
 			},
 			colors: {
-				primary: '#15212C',
-				secondary: '#CBF381',
-				background: '#1A191D',
-				textPrimary: '#FFFFFF',
-				textSecondary: '#66D9ED',
-				borderColor: '#E0E0E0',
+				primary: 'var(--color-primary)',
+				secondary: 'var(--color-secondary)',
+				background: 'var(--color-background)',
+				textPrimary: 'var(--color-textPrimary)',
+				textSecondary: 'var(--color-textSecondary)',
+				borderColor: 'var(--color-borderColor)',
 				black: '#000000',
 			},
 			screens: {
