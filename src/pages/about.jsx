@@ -10,7 +10,7 @@ export default function About() {
 		>
 			<PageTitle title='about' />
 			<p className='text-lg text-textSecondary max-w-2xl mb-12'>
-				As a seasoned Front End and Mobile Developer, I have extensive experience in building and enhancing
+				As a Front End and Mobile Developer, I have extensive experience in building and enhancing
 				web and mobile applications using technologies such as React, React Native, and TypeScript. My work
 				spans across multiple industries, where I have successfully delivered high-performance, user-centric
 				applications. I have a strong focus on user experience, accessibility, and collaboration with

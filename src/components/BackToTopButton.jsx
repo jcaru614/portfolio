@@ -28,7 +28,7 @@ const BackToTopButton = () => {
 				isVisible ? 'opacity-100' : 'opacity-0'
 			}`}
 		>
-			<FaArrowUp className='text-xl' />
+			<FaArrowUp className='text-xl text-textPrimary' />
 		</button>
 	);
 };

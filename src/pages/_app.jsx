@@ -15,6 +15,7 @@ export default function App({ Component, pageProps }) {
 			document.body.classList.add('dark');
 		}
 	}, []);
+
 	return (
 		<Layout>
 			<Head>
