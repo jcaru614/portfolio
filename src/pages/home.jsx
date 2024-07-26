@@ -21,7 +21,7 @@ export default function Home() {
 		>
 			<div className='relative z-10'>
 				<h1 className='text-8xl font-bold mb-4 text-textPrimary'>Joey Caruana</h1>
-				<p className='text-2xl font-medium text-textSecondary'>Software Engineer, Front End & App Developer.</p>
+				<p className='text-2xl font-medium text-textSecondary'>Front End & Mobile Developer</p>
 			</div>
 			<div className='shapes-container absolute inset-0 z-0 overflow-hidden'>
 				{shapes.map((shape, index) => (

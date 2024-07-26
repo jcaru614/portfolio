@@ -5,7 +5,7 @@ const BackToTopButton = () => {
 	const [isVisible, setIsVisible] = useState(false);
 
 	const handleScroll = () => {
-		const bottomReached = window.innerHeight + window.scrollY >= document.body.offsetHeight;
+		const bottomReached = window.innerHeight + window.scrollY >= document.body.offsetHeight - 50;
 		setIsVisible(bottomReached);
 	};
 
