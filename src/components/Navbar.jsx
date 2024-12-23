@@ -34,7 +34,7 @@ export default function Navbar() {
 					Creating immersive, engaging, and top-tier digital solutions for web and mobile.
 				</p>
 				<nav className='flex flex-col space-y-6 mb-6 flex-grow'>
-					{['Home', 'About', 'Experience', 'Contact'].map((item, index) => (
+					{['Home', 'About', 'Experience', 'Projects', 'Contact'].map((item, index) => (
 						<div key={index} className='relative flex items-center group'>
 							<span
 								role='presentation'
