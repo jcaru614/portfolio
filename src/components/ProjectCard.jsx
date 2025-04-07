@@ -1,61 +1,88 @@
 import React from 'react';
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import Image from 'next/image';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-const ProjectCard = ({ title, description, images, skills, link, className }) => {
-	return (
-		<a href={link} target='_blank' rel='noopener noreferrer' className={`block ${className}`}>
-			<div className='p-6 shadow-lg hover:bg-primary hover:shadow-xl hover:rounded-lg transition-all duration-300 max-w-xl mx-auto mb-6 min-h-[350px] flex'>
-				{/* Image Carousel on the Left */}
-				<div className='w-1/3 pr-4'>
-					<Carousel
-						showThumbs={false}
-						infiniteLoop={true}
-						autoPlay={true}
-						interval={3000}
-						transitionTime={500}
-						showArrows={false}
-						showIndicators={false}
-						showStatus={false}
-					>
-						{images.map((image, index) => (
-							<div key={index}>
-								<Image
-									src={image}
-									alt={title}
-									width={400}
-									height={300}
-									className='w-full h-full object-cover rounded-lg'
-								/>
-							</div>
-						))}
-					</Carousel>
-				</div>
+const ProjectCard = ({ title, description, images, skills, link, imageSize, github }) => {
+  const width = imageSize?.width || 200;
+  const height = imageSize?.height || 400;
 
-				{/* Text Content on the Right */}
-				<div className='flex-1'>
-					<div className='flex justify-between items-center mb-4'>
-						<div className='flex items-center'>
-							<h3 className='text-xl font-bold text-textPrimary hover:text-secondary'>{title}</h3>
-							<FaExternalLinkAlt className='ml-2 text-secondary' />
-						</div>
-					</div>
-					<p className='text-textSecondary mb-4 text-left'>{description}</p>
+  return (
+    <div
+      onClick={() => window.open(link, '_blank')}
+      className='cursor-pointer w-full flex flex-col items-start gap-4 p-6 rounded-lg shadow-xl bg-background hover:bg-primary hover:shadow-2xl transition-all duration-300'
+    >
+      <div className='w-full flex items-center justify-between'>
+        <div className='flex items-center gap-2 text-textPrimary hover:text-secondary'>
+          <h3 className='text-2xl font-bold leading-none'>{title}</h3>
+          <FiExternalLink size={20} />
+        </div>
 
-					{/* Skills section at the bottom */}
-					<div className='flex flex-wrap gap-2'>
-						{skills.map((skill, index) => (
-							<span key={index} className='bg-secondary text-black px-3 py-1 rounded-full'>
-								{skill}
-							</span>
-						))}
-					</div>
-				</div>
-			</div>
-		</a>
-	);
+        {github && (
+          <a
+            href={github}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='text-textPrimary hover:text-secondary transition-colors duration-200'
+            title='View GitHub'
+            onClick={(e) => e.stopPropagation()}
+          >
+            <FiGithub size={25} />
+          </a>
+        )}
+      </div>
+
+      <div className='w-full max-w-full'>
+        <Carousel
+          showThumbs={false}
+          infiniteLoop
+          autoPlay
+          interval={4000}
+          transitionTime={600}
+          showArrows={false}
+          showIndicators={false}
+          showStatus={false}
+        >
+          {images.map((img, idx) => (
+            <div
+              key={idx}
+              className='flex justify-center items-center'
+              style={{
+                width: '100%',
+                maxWidth: `${width}px`,
+                height: `${height}px`,
+                margin: '0 auto',
+              }}
+            >
+              <Image
+                src={img}
+                alt={`${title} screenshot ${idx + 1}`}
+                width={width}
+                height={height}
+                className='object-contain rounded-lg'
+              />
+            </div>
+          ))}
+        </Carousel>
+      </div>
+
+      <div className='w-full text-left'>
+        <p className='text-textSecondary text-base leading-relaxed mb-4'>{description}</p>
+
+        <div className='flex flex-wrap gap-2'>
+          {skills.map((skill, idx) => (
+            <span
+              key={idx}
+              className='bg-secondary text-background px-3 py-1 rounded-full text-sm font-medium'
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default ProjectCard;
