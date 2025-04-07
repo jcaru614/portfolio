@@ -54,7 +54,7 @@ const Experience = () => {
 				/>
 			))}
 			<Link
-				href='/resume.pdf'
+				href='/Joey_Caruana_Resume.pdf'
 				target='_blank'
 				rel='noopener noreferrer'
 				className={`mt-12 text-2xl text-textPrimary hover:text-secondary transition-colors duration-300 ${
