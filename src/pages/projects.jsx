@@ -22,7 +22,7 @@ const Projects = () => {
         'An AI-powered news platform that delivers accurate, unbiased headlines by collecting and analyzing stories in real time.',
       images: ['/images/ng1.png', '/images/ng2.png', '/images/ng3.png'],
       skills: ['React', 'TypeScript', 'Next.js', 'Vercel', 'Prisma', 'sql'],
-      link: 'neuralgazette-jcaru614s-projects.vercel.app',
+      link: 'https://neuralgazette-jcaru614s-projects.vercel.app/',
       github: 'https://github.com/jcaru614/neuralgazette',
       imageSize: {
         width: 260,
