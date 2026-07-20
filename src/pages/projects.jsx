@@ -10,6 +10,7 @@ const Projects = () => {
         'An AI-powered tool that analyzes earnings reports and assigns a buy/hold/sell rating to help traders make after-hours decisions.',
       images: ['/images/afterHoursIQ1.png', '/images/afterHoursIQ2.png'],
       skills: ['Next.js', 'TypeScript', 'OpenAI', 'Puppeteer', 'Tailwind'],
+      link: 'https://github.com/jcaru614/afterhoursiq',
       github: 'https://github.com/jcaru614/afterhoursiq',
       imageSize: {
         width: 400,
